@@ -9,6 +9,11 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
+        Doctor s1 = context.getBean(Doctor.class);
+        s1.assist();
+        System.out.println(s1.getQualification());
+
+
         Doctor d1 = context.getBean(Doctor.class);
         d1.assist();
 
