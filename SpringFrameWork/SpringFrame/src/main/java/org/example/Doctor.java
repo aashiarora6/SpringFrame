@@ -1,20 +1,11 @@
 package org.example;
 
-public class Doctor implements  Staff {
-    private String qualification;
+import org.springframework.stereotype.Component;
 
-    public Doctor(String qualification){
-        this.qualification = qualification;
-    }
+@Component
+public class Doctor implements  Staff {
+
     public void assist(){
         System.out.println("Doctor is Assisting");
-    }
-
-    public String getQualification() {
-        return qualification;
-    }
-
-    public void setQualification(String qualification) {
-        this.qualification = qualification;
     }
 }
