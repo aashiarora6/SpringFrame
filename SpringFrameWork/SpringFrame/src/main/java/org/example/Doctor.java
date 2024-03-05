@@ -1,12 +1,13 @@
 package org.example;
 
+import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
 @Scope(scopeName = "prototype")
 
-public class Doctor implements  Staff {
+public class Doctor implements  Staff, BeanNameAware {
 
     @Override
     public String toString() {
@@ -24,5 +25,10 @@ public class Doctor implements  Staff {
     }
     public String getQualification() {
         return qualification;
+    }
+
+    @Override
+    public void setBeanName(String s) {
+        System.out.println("Set Bean method was called");
     }
 }
