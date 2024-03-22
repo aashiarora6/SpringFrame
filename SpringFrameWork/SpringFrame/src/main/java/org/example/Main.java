@@ -16,10 +16,5 @@ public class Main {
         Doctor d1 = context.getBean(Doctor.class);
         d1.assist();
         d1.setQualification("MBBS");
-//        System.out.println(d1);
-//
-//        Doctor d2 = context.getBean(Doctor.class);
-//        System.out.println(d2);
-
-       }
+    }
 }
