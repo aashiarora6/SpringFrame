@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "kubernetes": "*.yaml",
+        "https://ffizer.github.io/ffizer/ffizer.schema.json": "file:///Users/aashima.ar/IdeaProjects/Voting-App/postgres-pod.yaml"
+    }
+}

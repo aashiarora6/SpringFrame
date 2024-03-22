@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-pod
+  labels:
+    name: redis-pod
+    app: demo-voting-app
+spec:
+  containers:
+    - name : redis
+      image : redis
+      ports:
+        - containerPort: 6379
+      resources:
+        limits:
+          cpu: "500m"  # Example CPU limit (500 milliCPU)
+          memory: "512Mi"  # Example memory limit (512 Mebibytes)
+        requests:
+          cpu: "100m"  # Example CPU request (100 milliCPU)
+          memory: "256Mi"  # Example memory request (256 Mebibytes)

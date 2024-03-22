@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: worker-app-pod
+  labels:
+    name: worker-app-pod
+    app: demo-voting-app
+spec:
+  containers:
+    - name: worker-app
+      image: kodekloud/examplevotingapp_w:v1
+      ports:
+        - containerPort: 5432
+      env:
+        - name: POSTGRES_USER
+          value: "postgres"
+        - name: POSTGRES_PASSWORD
+          value: "postgres"  # Specify the password value
+      resources:
+        limits:
+          cpu: "500m"  # Specify the CPU limit
+          memory: "512Mi"  # Specify the memory limit
+        requests:
+          cpu: "100m"  # Specify the CPU request
+          memory: "256Mi"  # Specify the memory request
